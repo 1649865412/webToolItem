@@ -1,0 +1,29 @@
+#log4j.rootLogger = [ level ] , appenderName, appenderName, …
+log4j.rootLogger=INFO, A1 ,R
+#这一句设置以为着所有的log都输出
+#如果为log4j.rootLogger=WARN, 则意味着只有WARN,ERROR,FATAL
+#被输出，DEBUG,INFO将被屏蔽掉.
+
+# A1 is set to be a ConsoleAppender.
+#log4j中Appender有几层如控制台、文件、GUI组件、甚至是套接口服务器、NT的事件记录器、UNIX Syslog守护进程等
+#ConsoleAppender输出到控制台
+log4j.appender.A1=org.apache.log4j.ConsoleAppender
+# A1 使用的输出布局，其中log4j提供4种布局. org.apache.log4j.HTMLLayout（以HTML表格形式布局）
+#org.apache.log4j.PatternLayout（可以灵活地指定布局模式），
+#org.apache.log4j.SimpleLayout（包含日志信息的级别和信息字符串），
+#org.apache.log4j.TTCCLayout（包含日志产生的时间、线程、类别等等信息）
+log4j.appender.A1.layout=org.apache.log4j.PatternLayout
+#灵活定义输出格式 具体查看log4j javadoc org.apache.log4j.PatternLayout
+#d 时间 ....
+log4j.appender.A1.layout.ConversionPattern=%-d{yyyy-MM-dd HH:mm:ss} [%c]-[%p] %m%n
+
+#R 输出到文件 RollingFileAppender的扩展，可以提供一种日志的备份功能。
+log4j.appender.R=org.apache.log4j.RollingFileAppender
+#日志文件的名称
+log4j.appender.R.File=C:/log4j/xpager.log
+#日志文件的大小
+log4j.appender.R.MaxFileSize=100KB
+# 保存一个备份文件
+log4j.appender.R.MaxBackupIndex=1
+log4j.appender.R.layout=org.apache.log4j.TTCCLayout
+log4j.appender.R.layout.ConversionPattern=%-d{yyyy-MM-dd HH:mm:ss} [%c]-[%p] %m%n

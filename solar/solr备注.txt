@@ -1,0 +1,71 @@
+solr 
+http://www.cnblogs.com/hoojo/archive/2011/10/21/2220431.html
+
+solr Facet查询
+
+
+
+
+Statistics
+	
+
+http://localhost:8080/solr/admin/stats.jsp
+	
+
+Statistics 管理页提供了与 Solr 性能相关的很多有用的统计数据。这些数据包括：
+
+关于何时加载索引以及索引中有多少文档的信息。
+
+关于用来服务查询的 SolrRequestHandler 的有用信息。
+
+涵盖索引过程的数据，包括添加、删除、提交等的数量。
+
+缓存实现和 hit/miss/eviction 信息
+
+Info
+	
+
+http://localhost:8080/solr/admin/registry.jsp
+	
+
+有关正在运行的 Solr 的版本以及在当前实现中进行查询、更新和缓存所使用的类的详细信息。此外，还包括文件存于 Solr subversion 存储库的何处的信息以及对该文件功能的一个简要描述。
+
+Distribution
+	
+
+http://localhost:8080/solr/admin/distributiondump.jsp
+	
+
+显示与索引发布和复制有关的信息。更多信息，请参见 “发布和复制” 一节。
+
+Ping
+	
+
+http://localhost:8080/solr/admin/ping
+	
+
+向服务器发出 ping 请求，包括在 solrconfig.xml 文件的 admin 部分定义的请求。
+
+Logging
+	
+
+http://localhost:8080/solr/admin/logging.jsp
+	
+
+让您可以动态更改当前应用程序的日志记录等级。更改日志记录等级对于调试在执行过程中可能出现的问题非常有用。
+
+properties
+	
+
+http: //localhost:8080/solr/admin/get-properties.jsp
+	
+
+显示当前系统正在使用的所有 Java 系统属性。Solr 支持通过命令行的系统属性替换。有关实现此特性的更多信息，请参见 solrconfig.xml 文件。
+
+Thread dump
+	
+
+http://localhost:8080/solr/admin/threaddump.jsp
+	
+
+thread dump 选项显示了在 JVM 中运行的所有线程的堆栈跟踪信息。

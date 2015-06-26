@@ -1,0 +1,223 @@
+#
+# An unexpected error has been detected by Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x6d90e027, pid=3996, tid=5192
+#
+# Java VM: Java HotSpot(TM) Client VM (11.3-b02 mixed mode windows-x86)
+# Problematic frame:
+# V  [jvm.dll+0x5e027]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0210a800):  VMThread [stack: 0x0c200000,0x0c250000] [id=5192]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x4e00ffbd
+
+Registers:
+EAX=0x02093ec8, EBX=0x02093f04, ECX=0x4e00ffb1, EDX=0x6da8c108
+ESP=0x0c24f598, EBP=0x0039af90, ESI=0x0aa4a6c8, EDI=0x0aa4a6c8
+EIP=0x6d90e027, EFLAGS=0x00010283
+
+Top of Stack: (sp=0x0c24f598)
+0x0c24f598:   0aa4a6c8 0aa4a6c8 6da2ed30 6d8ce78b
+0x0c24f5a8:   0aa4a6c8 0c24f5f0 0c24f5f0 00000002
+0x0c24f5b8:   0039e030 6d95f7b1 0aa4aa4e 02093d20
+0x0c24f5c8:   6d95f581 02093ec8 6d92ea93 0c24f5f0
+0x0c24f5d8:   00000000 0039e088 0aa4aa4e 6d95f397
+0x0c24f5e8:   0c24f5f0 00000000 6da948c8 0aa4aa4e
+0x0c24f5f8:   00000000 6d95a103 0aa4aa4e 0aa4aa4e
+0x0c24f608:   00000000 0c24f720 00000000 6d9ef6e3 
+
+Instructions: (pc=0x6d90e027)
+0x6d90e017:   cc cc cc cc cc cc cc cc cc 51 56 8b f1 8b 4e 04
+0x6d90e027:   8b 51 0c 83 c1 08 8b c2 c1 f8 02 85 d2 89 54 24 
+
+
+Stack: [0x0c200000,0x0c250000],  sp=0x0c24f598,  free space=317k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5e027]
+
+VM_Operation (0x0e51e3e0): GenCollectForAllocation, mode: safepoint, requested by thread 0x0d64a400
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0d64a800 JavaThread "Unknown thread" daemon [_thread_blocked, id=4024, stack(0x0e560000,0x0e5b0000)]
+  0x0d64a400 JavaThread "http-8080-1" daemon [_thread_blocked, id=5788, stack(0x0e4d0000,0x0e520000)]
+  0x0d64a000 JavaThread "TP-Monitor" daemon [_thread_blocked, id=6076, stack(0x0f330000,0x0f380000)]
+  0x0d649800 JavaThread "TP-Processor4" daemon [_thread_in_native, id=4560, stack(0x0f2a0000,0x0f2f0000)]
+  0x0d649400 JavaThread "TP-Processor3" daemon [_thread_blocked, id=4248, stack(0x0f210000,0x0f260000)]
+  0x0d648c00 JavaThread "TP-Processor2" daemon [_thread_blocked, id=5964, stack(0x0f180000,0x0f1d0000)]
+  0x0d648800 JavaThread "TP-Processor1" daemon [_thread_blocked, id=4528, stack(0x0f0f0000,0x0f140000)]
+  0x0d648000 JavaThread "http-8080-Acceptor-0" daemon [_thread_in_native, id=2092, stack(0x0f060000,0x0f0b0000)]
+  0x0d647400 JavaThread "ContainerBackgroundProcessor[StandardEngine[Catalina]]" daemon [_thread_blocked, id=3288, stack(0x0ef40000,0x0ef90000)]
+  0x0d647c00 JavaThread "AWT-Windows" daemon [_thread_in_native, id=3044, stack(0x0efd0000,0x0f020000)]
+  0x0d569c00 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=5816, stack(0x0ee80000,0x0eed0000)]
+  0x0d569400 JavaThread "startQuertz_QuartzSchedulerThread" [_thread_blocked, id=6012, stack(0x0ecb0000,0x0ed00000)]
+  0x0d569000 JavaThread "startQuertz_Worker-9" [_thread_blocked, id=2116, stack(0x0ec20000,0x0ec70000)]
+  0x0d568800 JavaThread "startQuertz_Worker-8" [_thread_blocked, id=5912, stack(0x0eb90000,0x0ebe0000)]
+  0x0d568400 JavaThread "startQuertz_Worker-7" [_thread_blocked, id=5844, stack(0x0eb00000,0x0eb50000)]
+  0x0d567c00 JavaThread "startQuertz_Worker-6" [_thread_blocked, id=5492, stack(0x0ea70000,0x0eac0000)]
+  0x0d567800 JavaThread "startQuertz_Worker-5" [_thread_blocked, id=4936, stack(0x0e9e0000,0x0ea30000)]
+  0x0d567400 JavaThread "startQuertz_Worker-4" [_thread_blocked, id=5812, stack(0x0e950000,0x0e9a0000)]
+  0x0d566c00 JavaThread "startQuertz_Worker-3" [_thread_blocked, id=3580, stack(0x0e8c0000,0x0e910000)]
+  0x0d566800 JavaThread "startQuertz_Worker-2" [_thread_blocked, id=5520, stack(0x0e830000,0x0e880000)]
+  0x0d566000 JavaThread "startQuertz_Worker-1" [_thread_blocked, id=4796, stack(0x0e7a0000,0x0e7f0000)]
+  0x0d384000 JavaThread "startQuertz_Worker-0" [_thread_blocked, id=1900, stack(0x0e710000,0x0e760000)]
+  0x0d383c00 JavaThread "shiroCache" daemon [_thread_blocked, id=5136, stack(0x0e680000,0x0e6d0000)]
+  0x0d383400 JavaThread "org%002ehibernate%002ecache%002einternal%002e%0053tandard%0051uery%0043ache.data" [_thread_blocked, id=1404, stack(0x0e440000,0x0e490000)]
+  0x0d383000 JavaThread "org%002ehibernate%002ecache%002espi%002e%0055pdate%0054imestamps%0043ache.data" [_thread_blocked, id=5616, stack(0x0e3b0000,0x0e400000)]
+  0x0d382800 JavaThread "shop%0041naylse%0050age%0044ata.data" [_thread_blocked, id=2332, stack(0x0e320000,0x0e370000)]
+  0x0d382400 JavaThread "com%002ebase%002eentity%002emain%002e%0052ole%0050ermission.data" [_thread_blocked, id=5504, stack(0x0e290000,0x0e2e0000)]
+  0x0d381c00 JavaThread "com%002ebase%002eentity%002emain%002e%004frganization.data" [_thread_blocked, id=1916, stack(0x0e200000,0x0e250000)]
+  0x0d381800 JavaThread "com%002ebase%002eentity%002emain%002e%004frganization%0052ole.data" [_thread_blocked, id=5424, stack(0x0e170000,0x0e1c0000)]
+  0x0d381000 JavaThread "param%0044ata.data" [_thread_blocked, id=4764, stack(0x0e0e0000,0x0e130000)]
+  0x0d380c00 JavaThread "plate%0044ata.data" [_thread_blocked, id=4552, stack(0x0e050000,0x0e0a0000)]
+  0x0d380800 JavaThread "com%002ebase%002eentity%002emain%002e%0055ser%0052ole.data" [_thread_blocked, id=5632, stack(0x0dfc0000,0x0e010000)]
+  0x0cfd9000 JavaThread "com%002ebase%002eentity%002emain%002e%0050ermission.data" [_thread_blocked, id=4664, stack(0x0df30000,0x0df80000)]
+  0x0ccc2000 JavaThread "summary%0044ata.data" [_thread_blocked, id=5508, stack(0x0dea0000,0x0def0000)]
+  0x0cfd8c00 JavaThread "com%002ebase%002eentity%002emain%002e%0052ole%0050ermission%0044ata%0043ontrol.data" [_thread_blocked, id=4604, stack(0x0de10000,0x0de60000)]
+  0x0ccb5000 JavaThread "com%002ebase%002eentity%002emain%002e%0052ole.data" [_thread_blocked, id=2756, stack(0x0dd80000,0x0ddd0000)]
+  0x0cf40400 JavaThread "com%002ebase%002eentity%002emain%002e%0044ata%0043ontrol.data" [_thread_blocked, id=5432, stack(0x0dcf0000,0x0dd40000)]
+  0x0cf3fc00 JavaThread "com%002ebase%002eentity%002emain%002e%004dodule.data" [_thread_blocked, id=4716, stack(0x0dc60000,0x0dcb0000)]
+  0x0cf3f800 JavaThread "com%002ebase%002eentity%002emain%002e%0044ictionary.data" [_thread_blocked, id=2380, stack(0x0dbd0000,0x0dc20000)]
+  0x0d0ed400 JavaThread "com%002ebase%002eentity%002emain%002e%0055ser.data" [_thread_blocked, id=2140, stack(0x0db40000,0x0db90000)]
+  0x0cca6800 JavaThread "net.sf.ehcache.CacheManager@772504" daemon [_thread_blocked, id=6032, stack(0x0dab0000,0x0db00000)]
+  0x0ccb9800 JavaThread "MySQL Statement Cancellation Timer" daemon [_thread_blocked, id=4992, stack(0x0da20000,0x0da70000)]
+  0x0cdcf800 JavaThread "GC Daemon" daemon [_thread_blocked, id=2416, stack(0x0d140000,0x0d190000)]
+  0x02176c00 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=3364, stack(0x0ca20000,0x0ca70000)]
+  0x02170c00 JavaThread "CompilerThread0" daemon [_thread_blocked, id=3524, stack(0x0c9d0000,0x0ca20000)]
+  0x02163c00 JavaThread "JDWP Command Reader" daemon [_thread_blocked, id=5640, stack(0x0c760000,0x0c7b0000)]
+  0x02163400 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=4692, stack(0x0c680000,0x0c6d0000)]
+  0x02161c00 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=4644, stack(0x0c590000,0x0c5e0000)]
+  0x02124800 JavaThread "Attach Listener" daemon [_thread_blocked, id=5708, stack(0x0c440000,0x0c490000)]
+  0x02123c00 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=3812, stack(0x0c3b0000,0x0c400000)]
+  0x0210f400 JavaThread "Finalizer" daemon [_thread_blocked, id=696, stack(0x0c320000,0x0c370000)]
+  0x0210dc00 JavaThread "Reference Handler" daemon [_thread_blocked, id=3068, stack(0x0c290000,0x0c2e0000)]
+  0x00399c00 JavaThread "main" [_thread_in_native, id=3280, stack(0x002f0000,0x00340000)]
+
+Other Threads:
+=>0x0210a800 VMThread [stack: 0x0c200000,0x0c250000] [id=5192]
+  0x02177c00 WatcherThread [stack: 0x0cab0000,0x0cb00000] [id=5636]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x003980d8] UNKNOWN - owner thread: 0x0210a800
+[0x00398538] UNKNOWN - owner thread: 0x0d64a400
+
+Heap
+ def new generation   total 4544K, used 4543K [0x04200000, 0x046e0000, 0x046e0000)
+  eden space 4096K, 100% used [0x04200000, 0x04600000, 0x04600000)
+  from space 448K,  99% used [0x04670000, 0x046dffc0, 0x046e0000)
+  to   space 448K,   0% used [0x04600000, 0x04600000, 0x04670000)
+ tenured generation   total 60544K, used 60544K [0x046e0000, 0x08200000, 0x08200000)
+   the space 60544K, 100% used [0x046e0000, 0x08200000, 0x08200000, 0x08200000)
+ compacting perm gen  total 56576K, used 56451K [0x08200000, 0x0b940000, 0x0c200000)
+   the space 56576K,  99% used [0x08200000, 0x0b920f20, 0x0b8f5200, 0x0b940000)
+No shared spaces configured.
+
+Dynamic libraries:
+0x00400000 - 0x00424000 	C:\Users\Administrator\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\bin\javaw.exe
+0x77260000 - 0x773e0000 	C:\Windows\SysWOW64\ntdll.dll
+0x76460000 - 0x76570000 	C:\Windows\syswow64\kernel32.dll
+0x75ba0000 - 0x75be7000 	C:\Windows\syswow64\KERNELBASE.dll
+0x75ec0000 - 0x75f60000 	C:\Windows\syswow64\ADVAPI32.dll
+0x75f60000 - 0x7600c000 	C:\Windows\syswow64\msvcrt.dll
+0x75af0000 - 0x75b09000 	C:\Windows\SysWOW64\sechost.dll
+0x76010000 - 0x76100000 	C:\Windows\syswow64\RPCRT4.dll
+0x74920000 - 0x74980000 	C:\Windows\syswow64\SspiCli.dll
+0x74910000 - 0x7491c000 	C:\Windows\syswow64\CRYPTBASE.dll
+0x76360000 - 0x76460000 	C:\Windows\syswow64\USER32.dll
+0x768f0000 - 0x76980000 	C:\Windows\syswow64\GDI32.dll
+0x758f0000 - 0x758fa000 	C:\Windows\syswow64\LPK.dll
+0x76130000 - 0x761cd000 	C:\Windows\syswow64\USP10.dll
+0x76570000 - 0x765d0000 	C:\Windows\system32\IMM32.DLL
+0x76790000 - 0x7685c000 	C:\Windows\syswow64\MSCTF.dll
+0x7c340000 - 0x7c396000 	C:\Users\Administrator\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\msvcr71.dll
+0x6d8b0000 - 0x6db06000 	C:\Users\Administrator\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\client\jvm.dll
+0x73200000 - 0x73232000 	C:\Windows\system32\WINMM.dll
+0x72c10000 - 0x72c5c000 	C:\Windows\system32\apphelp.dll
+0x6d340000 - 0x6d348000 	C:\Users\Administrator\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\hpi.dll
+0x77230000 - 0x77235000 	C:\Windows\syswow64\PSAPI.DLL
+0x6d430000 - 0x6d459000 	C:\Users\Administrator\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\jdwp.dll
+0x6d750000 - 0x6d756000 	C:\Users\Administrator\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\npt.dll
+0x6d860000 - 0x6d86c000 	C:\Users\Administrator\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\verify.dll
+0x6d3e0000 - 0x6d3ff000 	C:\Users\Administrator\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\java.dll
+0x6d8a0000 - 0x6d8af000 	C:\Users\Administrator\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\zip.dll
+0x6d2b0000 - 0x6d2b7000 	C:\Users\Administrator\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\dt_socket.dll
+0x75a30000 - 0x75a65000 	C:\Windows\syswow64\WS2_32.dll
+0x758e0000 - 0x758e6000 	C:\Windows\syswow64\NSI.dll
+0x725a0000 - 0x725b0000 	C:\Windows\system32\NLAapi.dll
+0x72590000 - 0x725a0000 	C:\Windows\system32\napinsp.dll
+0x72570000 - 0x72582000 	C:\Windows\system32\pnrpnsp.dll
+0x72fb0000 - 0x72fec000 	C:\Windows\System32\mswsock.dll
+0x73090000 - 0x730d4000 	C:\Windows\system32\DNSAPI.dll
+0x724c0000 - 0x724c8000 	C:\Windows\System32\winrnr.dll
+0x724b0000 - 0x724bd000 	C:\Windows\system32\wshbth.dll
+0x732a0000 - 0x732bc000 	C:\Windows\system32\IPHLPAPI.DLL
+0x73290000 - 0x73297000 	C:\Windows\system32\WINNSI.DLL
+0x721a0000 - 0x721d8000 	C:\Windows\System32\fwpuclnt.dll
+0x721f0000 - 0x721f6000 	C:\Windows\system32\rasadhlp.dll
+0x72500000 - 0x72505000 	C:\Windows\System32\wshtcpip.dll
+0x6d610000 - 0x6d619000 	C:\Users\Administrator\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\management.dll
+0x6d840000 - 0x6d848000 	C:\Users\Administrator\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\sunmscapi.dll
+0x75910000 - 0x75a30000 	C:\Windows\syswow64\CRYPT32.dll
+0x75d10000 - 0x75d1c000 	C:\Windows\syswow64\MSASN1.dll
+0x6d6c0000 - 0x6d6d3000 	C:\Users\Administrator\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\net.dll
+0x721e0000 - 0x721e6000 	C:\Windows\System32\wship6.dll
+0x72750000 - 0x72766000 	C:\Windows\system32\CRYPTSP.dll
+0x72710000 - 0x7274b000 	C:\Windows\system32\rsaenh.dll
+0x734a0000 - 0x734b7000 	C:\Windows\system32\USERENV.dll
+0x73490000 - 0x7349b000 	C:\Windows\system32\profapi.dll
+0x6d6e0000 - 0x6d6e9000 	C:\Users\Administrator\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\nio.dll
+0x6d0b0000 - 0x6d1fa000 	C:\Users\Administrator\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\awt.dll
+0x74650000 - 0x746a1000 	C:\Windows\system32\WINSPOOL.DRV
+0x765d0000 - 0x7672c000 	C:\Windows\syswow64\ole32.dll
+0x72d60000 - 0x72efe000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_41e6975e2bd6f2b2\comctl32.dll
+0x76860000 - 0x768b7000 	C:\Windows\syswow64\SHLWAPI.dll
+0x73580000 - 0x73593000 	C:\Windows\system32\DWMAPI.DLL
+0x71a60000 - 0x71ae0000 	C:\Windows\system32\uxtheme.dll
+0x74980000 - 0x755ca000 	C:\Windows\syswow64\shell32.dll
+0x6d2e0000 - 0x6d334000 	C:\Users\Administrator\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\fontmanager.dll
+0x68250000 - 0x68413000 	C:\Windows\system32\d3d9.dll
+0x748f0000 - 0x748f9000 	C:\Windows\system32\VERSION.dll
+0x73780000 - 0x73786000 	C:\Windows\system32\d3d8thk.dll
+0x61d30000 - 0x61db8000 	C:\Windows\system32\aticfx32.dll
+0x73ee0000 - 0x73eea000 	C:\Windows\system32\atiu9pag.dll
+0x67a70000 - 0x67e5a000 	C:\Windows\system32\atiumdag.dll
+0x67ee0000 - 0x68244000 	C:\Windows\system32\atiumdva.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:53614 -Dcatalina.home=D:\TOMCAT\apache-tomcat-6.0.34last -Dcatalina.base=D:\TOMCAT\apache-tomcat-6.0.34last -Djava.endorsed.dirs=D:\TOMCAT\apache-tomcat-6.0.34last/common/endorsed -Djava.io.tmpdir=D:\TOMCAT\apache-tomcat-6.0.34last\temp -Djava.library.path=C:\Users\Administrator\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\bin;D:\TOMCAT\apache-tomcat-6.0.34last\bin -Dsun.io.useCanonCaches=false 
+java_command: org.apache.catalina.startup.Bootstrap start
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.6.0_43
+CLASSPATH=.;C:\Program Files\Java\jdk1.6.0_43\lib;C:\Program Files\Java\jdk1.6.0_43\lib\tools.jar
+PATH=C:\Users\Administrator\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin;C:/Users/Administrator/AppData/Local/Genuitec/Common/binary/com.sun.java.jdk.win32.x86_1.6.0.013/jre/bin/client;C:/Users/Administrator/AppData/Local/Genuitec/Common/binary/com.sun.java.jdk.win32.x86_1.6.0.013/jre/bin;C:\Program Files (x86)\Common Files\NetSarang;C:\Program Files\Java\jdk1.6.0_43\bin;C:\Program Files\Java\jdk1.6.0_43\jre\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 16 Model 6 Stepping 2, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows NT 6.1 Build 7601 Service Pack 1
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 16 model 6 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, mmxext, 3dnow, 3dnowext, sse4a
+
+Memory: 4k page, physical 4193592k(1100772k free), swap 4194303k(4194303k free)
+
+vm_info: Java HotSpot(TM) Client VM (11.3-b02) for windows-x86 JRE (1.6.0_13-b03), built on Mar  9 2009 01:15:24 by "java_re" with MS VC++ 7.1
+
+time: Thu Nov 13 10:31:54 2014
+elapsed time: 2426 seconds
+
