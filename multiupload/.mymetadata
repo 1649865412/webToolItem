@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="multiupload"
+  id="myeclipse.1286586544546"
+  context-root="/multiupload"
+  j2ee-spec="5.0"
+  archive="multiupload.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+
